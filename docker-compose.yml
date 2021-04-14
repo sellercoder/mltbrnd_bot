@@ -1,0 +1,25 @@
+version: '3.1'
+
+services:
+
+  mltbot:
+    container_name: mlt
+    build:
+      context: ./bot
+    volumes:
+      - ./bot:/bot
+    command: python bot.py
+    restart: always
+    env_file:
+      - "./bot/.env"
+
+
+
+
+
+
+
+
+
+
+
