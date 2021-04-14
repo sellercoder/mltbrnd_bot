@@ -1,0 +1,11 @@
+aiogram>=2.11.2,<3.0
+orator
+flask
+Flask-WTF
+tinydb
+pickledb
+environs~=8.0.0
+pybabel
+babel
+loguru
+pydantic
