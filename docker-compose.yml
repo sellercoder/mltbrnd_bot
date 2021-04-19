@@ -13,6 +13,17 @@ services:
     env_file:
       - "./bot/.env"
 
+  panel:
+    #container_name: tg-store
+    build:
+      context: ./bot
+    volumes:
+      - ./bot:/bot
+    command: python admin.py
+    restart: always
+    env_file:
+      - "./bot/.env"
+
 
 
 
