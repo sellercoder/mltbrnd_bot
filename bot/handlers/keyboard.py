@@ -12,6 +12,35 @@ shop_cd = CallbackData('shop','level','provider','plan')
 def make_shop_nav(level, provider="0", plan="0"):
     return shop_cd.new(level=level, provider=provider, plan=plan)
 
+def main_menu():
+    markup = InlineKeyboardMarkup(row_width=2)
+
+    catalog_btn = InlineKeyboardButton(
+        text="📦 Тарифы",
+        callback_data="catalog")
+
+    profile_btn = InlineKeyboardButton(
+        text="💼 Кабинет",
+        callback_data="profile")
+
+    info_btn = InlineKeyboardButton(
+        text="🧮 Оплата",
+        callback_data="info1")
+
+    info2_btn = InlineKeyboardButton(
+        text="🚚 Доставка",
+        callback_data="info3")
+
+    info3_btn = InlineKeyboardButton(
+        text="📪 Контакты",
+        callback_data="info3")
+
+    markup.row(catalog_btn, profile_btn)
+    markup.row(info_btn,info2_btn)
+    markup.row(info3_btn)
+
+    return markup
+
 
 def catalog_menu():
     markup = InlineKeyboardMarkup(row_width=1)

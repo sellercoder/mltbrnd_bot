@@ -1,0 +1,42 @@
+<!-- Sidebar Nav -->
+<aside id="sidebar" class="bg-dark js-custom-scroll side-nav shadow-sm">
+  <ul id="sideNav" class="side-nav-menu side-nav-menu-top-level mb-0">
+    <!-- Dashboard -->
+    <li class="side-nav-menu-item">
+      <a class="animsition-link text-white side-nav-menu-link media align-items-center {{ 'text-danger' if active_page == 'index' else '' }}" href="/">
+        <span class="side-nav-menu-icon d-flex mr-3">
+          <i class="text-white gd-dashboard"></i>
+        </span>
+        <span class="side-nav-fadeout-on-closed media-body">Сводка</span>
+      </a>
+    </li>
+    <li class="sidebar-heading h6">Основное</li>
+    <li class="side-nav-menu-item">
+      <a class="animsition-link text-white side-nav-menu-link media align-items-center {{ 'text-danger' if active_page == 'categories' else '' }}" href="/">
+        <span class="side-nav-menu-icon d-flex mr-3">
+          <i class="text-white gd-layout-tab"></i>
+        </span>
+        <span class="side-nav-fadeout-on-closed media-body">Операторы</span>
+      </a>
+    </li>
+    <li class="side-nav-menu-item">
+      <a class="animsition-link text-white side-nav-menu-link media align-items-center {{ 'text-danger' if active_page == 'products' else '' }}" href="/">
+        <span class="side-nav-menu-icon d-flex mr-3">
+          <i class="text-white gd-package"></i>
+        </span>
+        <span class="side-nav-fadeout-on-closed media-body">Тарифы</span>
+      </a>
+    </li>
+    <li class="sidebar-heading h6">Настройки</li>
+    <li class="side-nav-menu-item">
+      <a class="text-white side-nav-menu-link media align-items-center {{ 'text-danger' if active_page == 'content' else '' }}" href="/content">
+        <span class="side-nav-menu-icon d-flex mr-3">
+          <i class="text-white gd-pencil-alt"></i>
+        </span>
+        <span class="side-nav-fadeout-on-closed media-body">Контент</span>
+      </a>
+    </li>
+
+  </ul>
+</aside>
+<!-- End Sidebar Nav -->

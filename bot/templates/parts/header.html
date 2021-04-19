@@ -1,0 +1,58 @@
+
+<!-- Header -->
+<header class="header bg-darker shadow-sm">
+  <nav class="navbar flex-nowrap p-0">
+    <div class="navbar-brand-wrapper d-flex align-items-center col-auto">
+      <!-- Logo For Mobile View -->
+      <a class="navbar-brand navbar-brand-mobile text-white" href="/">
+        МБ
+      </a>
+      <!-- End Logo For Mobile View -->
+      <!-- Logo For Desktop View -->
+      <strong class="text-dark">
+      <a class="text-white navbar-brand navbar-brand-desktop" href="/">
+        МБ
+      </a>
+      </strong>
+      <!-- End Logo For Desktop View -->
+    </div>
+    <div class="header-content col px-md-3">
+      <div class="d-flex align-items-center">
+        <!-- Side Nav Toggle -->
+        <a class="link-white js-side-nav header-invoker d-flex mr-md-2" href="#" data-close-invoker="#sidebarClose" data-target="#sidebar" data-target-wrapper="body">
+          <i class="gd-align-left"></i>
+        </a>
+        <!-- End Side Nav Toggle -->
+        <!-- User Notifications -->
+        <div class="dropdown ml-auto">
+          <a id="notificationsInvoker" class="header-invoker" href="#" aria-controls="notifications" aria-haspopup="true" aria-expanded="false" data-unfold-event="click" data-unfold-target="#notifications" data-unfold-type="css-animation" data-unfold-duration="300" data-unfold-animation-in="fadeIn" data-unfold-animation-out="fadeOut">
+            <i class="gd-bell"></i>
+          </a>
+        </div>
+        <!-- End User Notifications -->
+        <!-- User Avatar -->
+        <div class="dropdown mx-3 dropdown ml-2">
+          <a id="profileMenuInvoker" class="text-white header-complex-invoker" href="#" aria-controls="profileMenu" aria-haspopup="true" aria-expanded="false" data-unfold-event="click" data-unfold-target="#profileMenu" data-unfold-type="css-animation" data-unfold-duration="300" data-unfold-animation-in="fadeIn" data-unfold-animation-out="fadeOut">
+            <!--img class="avatar rounded-circle mr-md-2" src="#" alt="John Doe"-->
+            <span class="d-none d-md-block">Администратор</span>
+            <i class="gd-angle-down d-none d-md-block ml-2"></i>
+          </a>
+          <ul id="profileMenu" class="unfold unfold-user unfold-light unfold-top unfold-centered position-absolute pt-2 pb-1 mt-4 unfold-css-animation unfold-hidden fadeOut" aria-labelledby="profileMenuInvoker" style="animation-duration: 300ms;">
+            <li class="unfold-item">
+            </li>
+            <li class="unfold-item unfold-item-has-divider">
+              <a class="unfold-link d-flex align-items-center text-nowrap" href="#">
+                <span class="unfold-item-icon mr-3">
+                  <i class="gd-power-off"></i>
+                </span>
+                Выйти
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- End User Avatar -->
+      </div>
+    </div>
+  </nav>
+</header>
+<!-- End Header -->

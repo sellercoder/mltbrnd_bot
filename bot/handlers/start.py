@@ -14,40 +14,10 @@ from .keyboard import *
 from api import *
 # END IMPORTS ##############################################
 
-def main_menu():
-    markup = ReplyKeyboardMarkup(resize_keyboard=True)
-    catalog_btn = KeyboardButton(text="📦 Тарифы")
-    profile_btn = KeyboardButton(text="💼 Кабинет")
-    payment_btn = KeyboardButton(text="🧮 Оплата")
-    delivery_btn = KeyboardButton(text="🚚 Доставка")
-    contacts_btn = KeyboardButton(text="📪 Контакты")
-    markup.row(catalog_btn,profile_btn)
-    markup.row(payment_btn,delivery_btn)
-    markup.row(contacts_btn)
-    return markup
-
-def cancel_menu():
-    markup = ReplyKeyboardMarkup(resize_keyboard=True)
-    catalog_btn = KeyboardButton(text="↩️ Вернуться в меню")
-    markup.row(catalog_btn)
-    return markup
-
 @dp.message_handler(commands=["start"], state="*")
 async def bot_start(message: types.Message):
-    text = """
-    Бот для @art994 от @sellercoder
-    https://telegra.ph/Razrabotka-bota-04-14
-    """
-    cover = InputFile('cover.jpg')
-    await message.answer_photo(cover,caption=text,reply_markup=main_menu())
-
-@dp.message_handler(text=["↩️ Вернуться в меню"], state="*")
-async def bot_main(message: types.Message):
-    text = "Дарова, отец!"
-    cover = InputFile('cover.jpg')
-    await message.delete()
-    await message.answer("✨")
-    await message.answer_photo(cover,caption=text,reply_markup=main_menu())
+    page = getPage('main')
+    await message.answer(page,reply_markup=main_menu())
 
 @dp.message_handler(text=["📦 Тарифы"])
 async def catalog_page(message: types.Message):

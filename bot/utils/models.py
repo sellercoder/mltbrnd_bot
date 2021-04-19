@@ -9,6 +9,10 @@ from orator import accessor
 # database connect #########################################
 from utils.connector import db
 
+
+class Page(Model):
+    __guarded__ = ['created_at', 'updated_at']
+
 class Provider(Model):
     __appends__ = ['plans']
     __visible__ = ['id', 'name', 'description', 'cover', 'plans']

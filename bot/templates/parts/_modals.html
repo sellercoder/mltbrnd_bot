@@ -1,0 +1,19 @@
+<!-- Modal -->
+<div class="modal fade" id="myModal" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content py-5">
+      <header class="modal-header flex-column justify-content-center border-0 mb-3 mb-xl-5">
+      </header>
+      <div class="modal-body pt-3 mb-5 mb-md-7 text-center">
+
+    </div>
+  </div>
+</div>
+<script>
+$('.getAbout').on('click', function() {
+  $('.modal-body').load('/site_info', function() {
+    $('#myModal').modal({ show: true });
+  });
+});
+</script>

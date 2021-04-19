@@ -1,5 +1,8 @@
 from utils.models import *
 
+def getPage(place):
+    page = Page.where('place', place).first()
+    return page.content if page else ""
 
 def getProviders():
     providers = Provider.all()

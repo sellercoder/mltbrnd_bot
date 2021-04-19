@@ -1,0 +1,11 @@
+
+  .custom-file-input~.custom-file-label::after {
+    content: "📎";
+  }
+
+  .form-control:focus {
+    border-color: #353b48 !important;
+    box-shadow: 0 0 2px rgba(53, 59, 72, 1.0) !important;
+  }
+
+

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>{{ title_page }} | Мультибрендовый by @sellercoder</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="theme-color" content="#1E272E">
+  <link rel="shortcut icon" href="{{ url_for('static',filename='img/favicon.ico') }}">
+  {% include 'parts/stylesheets.html' %}
+</head>
+<body class="has-sidebar has-fixed-sidebar-and-header bg-body">
+  {% include 'parts/header.html' %}
+  <main class="main">
+    {% include 'parts/sidebar.html' %}
+    <div class="content">
+      {% block content %}{% endblock %}
+      {% include 'parts/footer.html' %}
+    </div>
+  </main>
+    {% include 'parts/_modals.html' %}
+    {% include 'parts/_scripts.html' %}
+</body>
+</html>
